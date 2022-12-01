@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JAVA - BOMBER</title>
+<link rel="stylesheet" href="style.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#myBtn {
+	display: none;
+	position: fixed;
+	/* width: 32px;
+	height: 32px; */
+	bottom: 20px;
+	right: 20px;
+	z-index: 99;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 20px;
+	border-radius: 40px;
+	bottom: 20px;
+}
+
+#myBtn:hover {
+	background-color: #555;
+}
+</style>
+
+</head>
+<body>
+
+	<div class="header">
+
+		<div class="container">
+			<div class=" navbar">
+				<div class="logo">
+					<a href="index.html"><img
+						src="image/JAVA-BOMBER-logos_black.png" alt="hhh" width="125px"></a>
+				</div>
+				<nav>
+					<ul id="MenuItems">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="contactus.html">About Us</a></li>
+						<li><a href="Corejava.html">Core JAVA</a></li>
+						<li><a href="Advancejava.html">Advance JAVA</a></li>
+						<li><a href="">Interview</a></li>
+						<li><a href="account.html">Account</a></li>
+					</ul>
+				</nav>
+			</div>
+			<hr>
+		</div>
+		<img src="image/menu.png" class="menu-icon" onclick="menutoggle()">
+
+
+		<!----------Account Page--------->
+		<div class="account-page">
+			<div class="container">
+				<div class="row">
+					<div class="col-2">
+						<img src="image/JAVA-BOMBER-logos.jpeg" width="100%">
+					</div>
+
+					<div class="col-2">
+						<div class="form-container">
+							<div class="form-btn">
+								<span onclick="login()">Login</span> <span onclick="register()">Register</span>
+								<hr id="Indicator">
+							</div>
+
+
+							<form id="LoginForm" method="post" action="Login">
+								<input type="text" placeholder="Username" name="uname"> <input
+									type="password" placeholder="Password" name="pass">
+								<button type="submit" class="btn">Login</button>
+								<a href="">Forgot Password</a>
+							</form>
+							<form id="RegForm" method="post" action="Register">
+								<input type="text" placeholder="Username" name="uname"> <input
+									type="email" placeholder="Email" name="email"> <input
+									type="password" placeholder="Password" name="pass">
+								<button type="submit" class="btn">Register</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<!-- scroll to top button start -->
+		<button onclick="topFunction()" id="myBtn" title="Go to top">
+			<!-- <img alt="" src="image/toparrow.png" /> -->
+			TOP
+		</button>
+
+		<!-- scroll to top button end -->
+
+
+
+
+
+		<!-- footer Start -->
+
+
+
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col-1">
+						<h3>Download our App</h3>
+						<p>Download App for Android and ios mobile phone</p>
+						<div class="app-logo">
+							<img src="image/play-store.png"> <img
+								src="image/app-store.png">
+							<!-------------ios logo-------->
+						</div>
+					</div>
+					<div class="footer-col-2">
+						<img src="image/JAVA-BOMBER-logos_transparent.png">
+						<p>Our Purpose Is To Sustainability Make The Pleasure and
+							Benefits of Education Accessible To the Many.</p>
+					</div>
+					<div class="footer-col-3">
+						<h3>Useful links</h3>
+						<ul>
+							<li>Coupons</li>
+							<li>Blog Post</li>
+							<li>Return Policy</li>
+							<li>Join Affiliate</li>
+						</ul>
+
+					</div>
+					<div class="footer-col-4">
+						<h3>Follow us</h3>
+						<ul>
+							<a href="https://www.facebook.com/profile.php?id=100008336920121">
+								<li>Facebook</li>
+							</a>
+							<a href="https://twitter.com/home">
+								<li>Twitter</li>
+							</a>
+							<li>Instagram</li>
+							<a
+								href="https://www.youtube.com/channel/UC6hDuofPkD9V_1yiZFaK8Sw">
+								<li>Youtube</li>
+							</a>
+						</ul>
+
+					</div>
+				</div>
+				<hr>
+				<p class="copyright">Copyright 2022-Ravi Raj Thakur</p>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		// Get the button
+		let
+		mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20
+					|| document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+
+
+	<!-------------js for toggle menu---------->
+
+	<script>
+		var MenuItems = document.getElementById("MenuItems");
+
+		MenuItems.style.maxHeight = "0px";
+		function menutoggle() {
+			if (MenuItems.style.maxHeight == "0px") {
+				MenuItems.style.maxHeight = "200px"
+			} else {
+				MenuItems.style.maxHeight = "0px"
+			}
+		}
+	</script>
+	<!-- js for toggle form -->
+	<script>
+		var LoginForm = document.getElementById("LoginForm");
+		var RegForm = document.getElementById("RegForm");
+		var Indicator = document.getElementById("Indicator");
+
+		function register() {
+			RegForm.style.transform = "translateX(0px)";
+			LoginForm.style.transform = "translateX(0px)";
+			Indicator.style.transform = "translateX(100px)";
+		}
+
+		function login() {
+			RegForm.style.transform = "translateX(300px)";
+			LoginForm.style.transform = "translateX(300px)";
+			Indicator.style.transform = "translateX(0px)";
+
+		}
+	</script>
+</body>
+
+</html>

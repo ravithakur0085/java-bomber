@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JAVA - BOMBER</title>
+<link rel="stylesheet" href="style.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3school.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<style>
+.carousel-cell {
+	margin-right: 600px;
+}
+
+.carousel-cell::before {
+	display: block;
+}
+
+.col-3 {
+	flex-basis: 30%;
+	min-width: 250px;
+	margin-bottom: 30px;
+}
+
+.col-3 img {
+	width: 100%;
+}
+
+input[type=text],select,textarea {
+	width: 50%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 50%;
+}
+
+input[type=submit]:hover {
+	width: 50%;
+	background-color: #45a049;
+}
+
+.container1 {
+	margin-left: 30%;
+	/* margin-right:20%; */
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	padding: 20px;
+}
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+}
+
+#myBtn:hover {
+	background-color: #555;
+}
+
+.abot-style {
+	width: 45%;
+	margin-left: 27%;
+	background-color: #f9f9f9;
+}
+.small-container1
+{
+	margin-right: 20%;
+	background-color: white;
+}
+</style>
+</head>
+<body>
+
+	<div class="header">
+
+		<div class="container">
+			<div class=" navbar">
+				<div class="logo">
+					<a href="index.html"><img
+						src="image/JAVA-BOMBER-logos_black.png" alt="hhh" width="125px"></a>
+				</div>
+				<nav>
+					<ul id="MenuItems">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="contactus.html">About Us</a></li>
+						<li><a href="Corejava.html">Core JAVA</a></li>
+						<li><a href="Advancejava.html">Advance JAVA</a></li>
+						<li><a href="">Interview</a></li>
+						<li><a href="account.html">Account</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+	</div>
+	<!-- scroll to top button start -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+	<!-- <div style="background-color: black; color: white; padding: 30px"></div>
+	<div style="background-color: lightgrey; padding: 30px 30px 2500px"> -->
+
+
+
+	<!-- scroll to top button end -->
+	<div class="small-container">
+		<h2 class="title">About Me</h2>
+		<div class="abot-style">
+			<p>Hi, first of all, thanks for visiting this page. This page is
+				all about me - Ravi Raj Kumar (Founder of JavaBomber). You will get
+				exciting things about my life. I belongs to Patna Bihar 800001. I
+				completed my Bachelor of Computer Application from Indira Gandhi
+				National Open University in 2022.</p>
+		</div>
+	</div>
+	<div class="small-container">
+		<h2 class="title">About JavaBomber</h2>
+		<div class="abot-style">
+			<p>
+				<i>Success is all about taking new initiatives.</i> I started
+				developing JavaBomber in the year 2021. At the moment, I was
+				providing training on Java. Meanwhile, I thought, why not to spread
+				my knowledge to the world. So I started developing JavaBomber on
+				Java. I told one of my students to convert the Java programs into
+				the HTML files. He converted all the files, I added some description
+				about the page and put it on the website. After that, I added Spring
+				and Hibernate and later I too many technologies. I left the Job and
+				set up a small business in Patna, and I hired some employees on
+				content and training both. In 1 years, JavaBomber grew up from 1 to
+				10 employees. So we are growing day by day. Our motto is to have
+				1000+ employees. Here, 70 employees are in content development and
+				rest in Management, Development, Training and Digital Marketing.
+			</p>
+		</div>
+	</div>
+	<div class="main-carousel"
+		data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+		<div class="carousel-cell">
+			<img src="image/mrthakur.jpg" alt="" height="350px" width="300px">
+		</div>
+		<div class="carousel-cell">
+			<img src="image/user-1.jpg" alt="" height="350px" width="300px">
+		</div>
+		<div class="carousel-cell">
+			<img src="image/user-2.jpeg" alt="" height="350px" width="300px">
+		</div>
+	</div>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<div class="small-container">
+		<br>
+		<h2 class="title">Contact Form</h2>
+
+	</div>
+
+
+	<!--form  -->
+
+	<div class="small-container1">
+		<div class="container1">
+			<form action="">
+				<label for="fname">First Name</label><br> <input type="text"
+					id="fname" name="firstname" placeholder="Your name.."> <br>
+				<label for="lname">Last Name</label><br> <input type="text"
+					id="lname" name="lastname" placeholder="Your last name..">
+				<br> <label for="eid">Email Id</label><br> <input
+					type="text" id="eid" name="emailid" placeholder="Your email id..">
+				<br> <label for="country">Country</label><br> <select
+					id="country" name="country">
+					<option value="australia">India</option>
+					<option value="australia">Australia</option>
+					<option value="canada">Canada</option>
+					<option value="usa">USA</option>
+				</select> <br> <label for="subject">Subject</label><br>
+				<textarea id="subject" name="subject"
+					placeholder="Write something.." style="height: 200px"></textarea>
+
+				<br> <input type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+
+
+
+
+	<!-- footer Start -->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download our App</h3>
+					<p>Download App for Android and ios mobile phone</p>
+					<div class="app-logo">
+						<img src="image/play-store.png"> <img
+							src="image/app-store.png">
+						<!-------------ios logo-------->
+					</div>
+				</div>
+				<div class="footer-col-2">
+					<img src="image/JAVA-BOMBER-logos_transparent.png">
+					<p>Our Purpose Is To Sustainability Make The Pleasure and
+						Benefits of Education Accessible To the Many.</p>
+				</div>
+				<div class="footer-col-3">
+					<h3>Useful links</h3>
+					<ul>
+						<li>Coupons</li>
+						<li>Blog Post</li>
+						<li>Return Policy</li>
+						<li>Join Affiliate</li>
+					</ul>
+
+				</div>
+				<div class="footer-col-4">
+					<h3>Follow us</h3>
+					<ul>
+						<a href="https://www.facebook.com/profile.php?id=100008336920121">
+							<li>Facebook</li>
+						</a>
+						<a href="https://twitter.com/home">
+							<li>Twitter</li>
+						</a>
+						<li>Instagram</li>
+						<a href="https://www.youtube.com/channel/UC6hDuofPkD9V_1yiZFaK8Sw">
+							<li>Youtube</li>
+						</a>
+					</ul>
+
+				</div>
+			</div>
+			<hr>
+			<p class="copyright">Copyright 2022-Ravi Raj Thakur</p>
+		</div>
+	</div>
+	<script>
+		// Get the button
+		let
+		mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20
+					|| document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+</body>
+</html>
